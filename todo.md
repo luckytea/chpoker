@@ -10,7 +10,6 @@
 
 * centering the picture;
 * fancy "number of chpoks" with a change in color and size depending on the number of points;
-* add icon;
 
 ## design
 
