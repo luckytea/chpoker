@@ -8,6 +8,7 @@
 
 * develop idle clicker mechanics;
 * leader board;
+* rhythm mode;
 
 ## ui
 
