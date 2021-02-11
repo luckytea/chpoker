@@ -1,57 +1,27 @@
 <!DOCTYPE html>
+<script language="javascript" src="./chpoker.js"></script>
+
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-    <script language="javascript">
-        var chpoks = 0;
-        var mode = 0;
-        var sfxChpok = new Audio("pop.mp3");
 
-        setInterval(auto_chpoker, 1000);
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        function auto_chpoker() {
-            if (mode == 1) {
-                changeImage();
-            }
-        }
+<body onload="main()">
+    <div class="flexbox-container-center">
+        <div class="header">
+            <h3>chpoker v0.0.6</h3>
+            <button type="button" onclick="switchMode()">Auto mode</button>
+        </div>
 
-        function switch_mode() {
-            if (mode == 0) {
-                mode = 1;
-            } else {
-                mode = 0;
-            }
-        }
+        <div>
+            <img alt="chpoker" class="chpoker" src="pop_cat_mouth_closed.png" id="imgClickAndChange" onclick="changeCatState()"/>
+        </div>
 
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-
-        function changeImage() {
-            sfxChpok.play();
-
-            document.getElementById("imgClickAndChange").src = "./1.png";
-            setTimeout(() => { document.getElementById("imgClickAndChange").src = "./0.png"; }, 100);
-
-            
-            document.getElementById("score").innerHTML = chpoks++;
-        }
-    </script>
-
-    <div class="header">
-        <h3>chpoker v0.0.5</h3>
-        <button type="button" onclick="switch_mode()">Auto mode</button>
+        <div class="score-table">
+            number of chpoks: <span id="score" class="score">0</span>
+        </div>
     </div>
+</body>
 
-    <div>
-        <img alt="chpoker" class="chpoker" src="./0.png" id="imgClickAndChange" onclick="changeImage()"/>
-    </div>
-
-    <div class="score-table">
-        number of chpoks: <span id="score" class="score">0</span>
-    </div>
-
-    </body>
 </html>
