@@ -1,5 +1,19 @@
 .chpoker {
     animation: idle 2.5s infinite ease-in-out;
+    width: 356px;
+}
+
+.score-table {
+    height: 50px;
+    width: 356px;
+    border: 4px double black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.score {
+    color: brown;
 }
 
 @keyframes idle {

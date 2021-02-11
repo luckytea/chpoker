@@ -19,17 +19,17 @@
             setTimeout(() => { document.getElementById("imgClickAndChange").src = "./0.png"; }, 100);
 
             
-            document.getElementById("chpoks").innerHTML = chpoks++;
+            document.getElementById("score").innerHTML = chpoks++;
         }
     </script>
 
-    <h1>chpoker v0.0.3</h1>
+    <h3>chpoker v0.0.4</h3>
 
-    number of chpoks: <div id="chpoks">0</div>
-
-    <p>
-        <img alt="chpoker" class="chpoker" src="./0.png" id="imgClickAndChange" onclick="changeImage()"/>
-    </p>
+    <img alt="chpoker" class="chpoker" src="./0.png" id="imgClickAndChange" onclick="changeImage()"/>
+    
+    <div class="score-table">
+        number of chpoks: <span id="score" class="score">0</span>
+    </div>
 
     </body>
 </html>
