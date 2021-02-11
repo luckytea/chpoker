@@ -2,7 +2,7 @@ const modeZen = 0;
 const modeIdle = 1;
 
 var CHPOKS = 0;
-var SFXCHPOK = new Audio("pop.mp3");
+var SFXCHPOK = new Audio("sfx/pop.mp3");
 var MODE = modeZen;
 
 function autoChpoker() {
