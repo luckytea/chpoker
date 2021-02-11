@@ -6,7 +6,24 @@
     <body>
     <script language="javascript">
         var chpoks = 0;
+        var mode = 0;
         var sfxChpok = new Audio("pop.mp3");
+
+        setInterval(auto_chpoker, 1000);
+
+        function auto_chpoker() {
+            if (mode == 1) {
+                changeImage();
+            }
+        }
+
+        function switch_mode() {
+            if (mode == 0) {
+                mode = 1;
+            } else {
+                mode = 0;
+            }
+        }
 
         function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
@@ -23,10 +40,15 @@
         }
     </script>
 
-    <h3>chpoker v0.0.4</h3>
+    <div class="header">
+        <h3>chpoker v0.0.4</h3>
+        <button type="button" onclick="switch_mode()">Auto mode</button>
+    </div>
 
-    <img alt="chpoker" class="chpoker" src="./0.png" id="imgClickAndChange" onclick="changeImage()"/>
-    
+    <div>
+        <img alt="chpoker" class="chpoker" src="./0.png" id="imgClickAndChange" onclick="changeImage()"/>
+    </div>
+
     <div class="score-table">
         number of chpoks: <span id="score" class="score">0</span>
     </div>

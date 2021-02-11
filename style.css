@@ -1,3 +1,11 @@
+.header {
+    padding-bottom: 50px;
+    width: 356px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .chpoker {
     animation: idle 2.5s infinite ease-in-out;
     width: 356px;
