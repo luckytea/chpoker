@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
+<body>
 <script language="javascript">
+    var i = 0
+
     function changeImage() {
-        if (document.getElementById("imgClickAndChange").src == "0.png") 
-        {
-            document.getElementById("imgClickAndChange").src = "1.png";
-            new Audio("pop.mp3").play();
-        }
-        else 
-        {
-            document.getElementById("imgClickAndChange").src = "0.png";
+        if (i == 0) {
+            document.getElementById("imgClickAndChange").src = "./1.png";
+            i = 1
+        } else {
+            document.getElementById("imgClickAndChange").src = "./0.png";
+            i = 0
         }
     }
 </script>
-<body>
+
 
 <h1>chpoker vAlpha</h1>
 
 <p>
-   <img src="0.png" alt="poper" id="imgClickAndChange" onclick="changeImage()">
+    <img alt="" src="./0.png" id="imgClickAndChange" onclick="changeImage()"/>
 </p>
 
 </body>
