@@ -1,49 +1,42 @@
 .header {
-    display: flex;
-    flex-flow: column;
-    align-content: space-between;
-
-    padding-bottom: 40px;
-    width: 400px;
+  padding-bottom: 50px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.version {
-    display: flex;
-    align-items: center;
-
-    padding-bottom: 10px;
-}
-
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
+.flexbox-container-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .chpoker {
-    animation: idle 2.5s infinite ease-in-out;
-    width: 356px;
+  animation: idle 2.5s infinite ease-in-out;
+  width: 356px;
 }
 
 .score-table {
-    height: 50px;
-    width: 356px;
-    border: 4px double black;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  height: 50px;
+  width: 356px;
+  border: 4px double black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .score {
-    color: brown;
+  color: brown;
 }
 
 @keyframes idle {
-0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
-}
-50% {
+  }
+  50% {
     transform: translateY(-35px);
-    }
+  }
 }
