@@ -31,10 +31,9 @@ function sleep(ms) {
 }
 
 function changeImage() {
-    sfxChpok.play();
-
     document.getElementById("imgClickAndChange").src = "./img/1.png";
-    setTimeout(() => { document.getElementById("imgClickAndChange").src = "./img/0.png"; }, 100);
+    sfxChpok.play();
+    setTimeout(() => { document.getElementById("imgClickAndChange").src = "./img/0.png"; }, 125);
 
     document.getElementById("score").innerHTML = chpoks++;
 }
