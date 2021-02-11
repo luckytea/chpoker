@@ -1,19 +1,18 @@
+const modeZen = 0;
+const modeIdle = 1;
+
 var CHPOKS = 0;
-var AUTOMODE = 0;
 var SFXCHPOK = new Audio("pop.mp3");
+var MODE = modeZen;
 
 function autoChpoker() {
-    if (AUTOMODE == 1) {
+    if (MODE == modeIdle) {
         changeCatState();
     }
 }
 
-function switchMode() {
-    if (AUTOMODE == 0) {
-        AUTOMODE = 1;
-    } else {
-        AUTOMODE = 0;
-    }
+function setMode(newMode) {
+    MODE = newMode;
 }
 
 function changeCatState() {
@@ -21,10 +20,10 @@ function changeCatState() {
     document.getElementById("score").innerHTML = CHPOKS;
     SFXCHPOK.play();
 
-    document.getElementById("imgClickAndChange").src = "pop_cat_mouth_open.png";
-    setTimeout(() => { document.getElementById("imgClickAndChange").src = "pop_cat_mouth_closed.png"; }, 100);
+    document.getElementById("imgClickAndChange").src = "img/pop_cat_mouth_open.png";
+    setTimeout(() => { document.getElementById("imgClickAndChange").src = "img/pop_cat_mouth_closed.png"; }, 125);
 }
 
 function main(){
-    setInterval(autoChpoker, 1000);
+    window.setInterval(autoChpoker, 1000)
 }

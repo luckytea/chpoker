@@ -3,16 +3,21 @@
 
 <html>
 
+<meta charset="utf-8">
+<title>chpoker</title>
+
 <head>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body onload="main()">
-    <div class="flexbox-container-center">
-        <div class="header">
-            <h3>chpoker v0.0.6</h3>
-            <button type="button" onclick="switchMode()">Auto mode</button>
-        </div>
+
+<div class="flexbox-container-center">
+    <div class="version">chpoker v0.0.9</div>
+    <div class="menu">
+        <button type="button" onclick="setMode(modeZen)">Zen mode</button>
+        <button type="button" onclick="setMode(modeIdle)">Idle mode</button>
+    </div>
 
         <div>
             <img alt="chpoker" class="chpoker" src="img/pop_cat_mouth_closed.png" id="imgClickAndChange" onclick="changeCatState()"/>

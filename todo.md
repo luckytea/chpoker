@@ -1,9 +1,5 @@
 # TODOs
 
-## script
-
-* move script to separate file;
-
 ## mechanic
 
 * develop idle clicker mechanics;
@@ -19,3 +15,7 @@
 ## design
 
 * add custom chpoker skins;
+
+## devops
+
+* auto update version;
