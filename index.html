@@ -9,12 +9,12 @@
         var chpoks = 0;
 
         function changeImage() {
+            new Audio("pop.mp3").play();
+
             if (i == 0) {
-                new Audio("pop.mp3").play();
                 document.getElementById("imgClickAndChange").src = "./1.png";
                 i = 1;
             } else {
-                new Audio("pop.mp3").play();
                 document.getElementById("imgClickAndChange").src = "./0.png";
                 i = 0;
             }
