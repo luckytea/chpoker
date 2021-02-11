@@ -5,26 +5,25 @@
     </head>
     <body>
     <script language="javascript">
-        var i = 0;
         var chpoks = 0;
+        var sfxChpok = new Audio("pop.mp3");
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
 
         function changeImage() {
-            new Audio("pop.mp3").play();
+            sfxChpok.play();
 
-            if (i == 0) {
-                document.getElementById("imgClickAndChange").src = "./1.png";
-                i = 1;
-            } else {
-                document.getElementById("imgClickAndChange").src = "./0.png";
-                i = 0;
-            }
+            document.getElementById("imgClickAndChange").src = "./1.png";
+            setTimeout(() => { document.getElementById("imgClickAndChange").src = "./0.png"; }, 100);
 
-            chpoks++;
-            document.getElementById("chpoks").innerHTML = chpoks;
+            
+            document.getElementById("chpoks").innerHTML = chpoks++;
         }
     </script>
 
-    <h1>chpoker v0.0.2</h1>
+    <h1>chpoker v0.0.3</h1>
 
     number of chpoks: <div id="chpoks">0</div>
 
