@@ -2,12 +2,16 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <title>chpoker</title>
     </head>
     <body>
     <script language="javascript">
+        const sfxChpok = new Audio("./sfx/pop.mp3");
+
         var chpoks = 0;
         var mode = 0;
-        var sfxChpok = new Audio("pop.mp3");
+        
 
         setInterval(auto_chpoker, 1000);
 
@@ -32,8 +36,8 @@
         function changeImage() {
             sfxChpok.play();
 
-            document.getElementById("imgClickAndChange").src = "./1.png";
-            setTimeout(() => { document.getElementById("imgClickAndChange").src = "./0.png"; }, 100);
+            document.getElementById("imgClickAndChange").src = "./img/1.png";
+            setTimeout(() => { document.getElementById("imgClickAndChange").src = "./img/0.png"; }, 100);
 
             
             document.getElementById("score").innerHTML = chpoks++;
@@ -41,12 +45,12 @@
     </script>
 
     <div class="header">
-        <h3>chpoker v0.0.5</h3>
+        <h3>chpoker v0.0.6</h3>
         <button type="button" onclick="switch_mode()">Auto mode</button>
     </div>
 
     <div>
-        <img alt="chpoker" class="chpoker" src="./0.png" id="imgClickAndChange" onclick="changeImage()"/>
+        <img alt="chpoker" class="chpoker" src="./img/0.png" id="imgClickAndChange" onclick="changeImage()"/>
     </div>
 
     <div class="score-table">
