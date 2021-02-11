@@ -1,9 +1,24 @@
 .header {
-    padding-bottom: 50px;
+    display: flex;
+    flex-flow: column;
+    align-content: space-between;
+
+    padding-bottom: 40px;
     width: 400px;
+}
+
+.version {
     display: flex;
     align-items: center;
+
+    padding-bottom: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    
 }
 
 .chpoker {

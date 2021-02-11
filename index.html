@@ -10,7 +10,10 @@
         const sfxChpok = new Audio("./sfx/pop.mp3");
 
         var chpoks = 0;
-        var mode = 0;
+        var mode   = 0;
+
+        const mode_zen  = 0;
+        const mode_idle = 1;
         
 
         setInterval(auto_chpoker, 1000);
@@ -22,11 +25,15 @@
         }
 
         function switch_mode() {
-            if (mode == 0) {
-                mode = 1;
+            if (mode == mode_zen) {
+                mode = mode_idle;
             } else {
-                mode = 0;
+                mode = mode_zen;
             }
+        }
+
+        function set_mode(new_mode) {
+            mode = new_mode;
         }
 
         function sleep(ms) {
@@ -45,8 +52,11 @@
     </script>
 
     <div class="header">
-        <h3>chpoker v0.0.6</h3>
-        <button type="button" onclick="switch_mode()">Auto mode</button>
+        <div class="version">chpoker v0.0.7</div>
+        <div class="menu">
+            <button type="button" onclick="set_mode(mode_zen)">Zen mode</button>
+            <button type="button" onclick="set_mode(mode_idle)">Idle mode</button>
+        </div>
     </div>
 
     <div>
