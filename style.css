@@ -15,8 +15,8 @@
 
 #chpoker {
   animation: idle 2.5s infinite ease-in-out;
-  width: 392px;
-  height: 370px;
+  width: 356px;
+  height: 356px;
 }
 
 #chpoker.cat_open {
@@ -36,6 +36,7 @@
 }
 
 .score-table {
+  padding-top: 100px;
   height: 50px;
   width: 356px;
   border: 4px double black;
