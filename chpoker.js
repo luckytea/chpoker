@@ -9,8 +9,6 @@ const spriteCatClose = "cat_close";
 const spriteDemonOpen = "demon_open";
 const spriteDemonClose = "demon_close";
 
-const SFXCHPOK = new Audio("sfx/pop.mp3");
-
 var CHPOKS = 0;
 var MODE = modeZen;
 
@@ -53,8 +51,15 @@ function changeState() {
     }
 
     document.getElementById("score").innerHTML = CHPOKS;
-    SFXCHPOK.play();
+    
+    playSfx("sfx/pop.mp3");
 
     document.getElementById("chpoker").className = styleClose;
     setTimeout(() => { document.getElementById("chpoker").className = styleOpen;}, 125);
+}
+
+function playSfx(sfx) {
+    var sfx = new Audio(sfx);
+    sfx.play();
+    delete  sfx;
 }
