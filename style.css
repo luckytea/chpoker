@@ -13,9 +13,18 @@
   flex-direction: column;
 }
 
-.chpoker {
+#chpoker {
   animation: idle 2.5s infinite ease-in-out;
-  width: 356px;
+  width: 392px;
+  height: 370px;
+}
+
+#chpoker.open {
+  background: url(img/popcat-sprite.png) 0 0;
+}
+
+#chpoker.close {
+  background: url(img/popcat-sprite.png) 0 -356px;
 }
 
 .score-table {

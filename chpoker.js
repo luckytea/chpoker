@@ -5,9 +5,13 @@ var CHPOKS = 0;
 var SFXCHPOK = new Audio("sfx/pop.mp3");
 var MODE = modeZen;
 
+function main(){
+    window.setInterval(autoChpoker, 1000)
+}
+
 function autoChpoker() {
     if (MODE == modeIdle) {
-        changeCatState();
+        changeState();
     }
 }
 
@@ -15,15 +19,11 @@ function setMode(newMode) {
     MODE = newMode;
 }
 
-function changeCatState() {
+function changeState() {
     CHPOKS++
     document.getElementById("score").innerHTML = CHPOKS;
     SFXCHPOK.play();
 
-    document.getElementById("imgClickAndChange").src = "img/pop_cat_mouth_open.png";
-    setTimeout(() => { document.getElementById("imgClickAndChange").src = "img/pop_cat_mouth_closed.png"; }, 125);
-}
-
-function main(){
-    window.setInterval(autoChpoker, 1000)
+    document.getElementById("chpoker").className = "close";
+    setTimeout(() => { document.getElementById("chpoker").className = "open"; }, 125);
 }
