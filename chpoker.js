@@ -12,8 +12,8 @@ const SFXCHPOK = new Audio("sfx/pop.mp3");
 var CHPOKS = 0;
 var MODE = modeZen;
 
-var styleClose = "";
-var styleOpen = "";
+var styleOpen  = spriteCatOpen;
+var styleClose = spriteCatClose;
 
 function main(){
     setSprite('popcat');
