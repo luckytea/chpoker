@@ -1,6 +1,8 @@
 const modeZen = 0;
 const modeIdle = 1;
 
+const bonusModificator = 10;
+
 const spriteCatOpen = "cat_open";
 const spriteCatClose = "cat_close";
 
@@ -44,6 +46,12 @@ function setSprite(sprite) {
 
 function changeState() {
     CHPOKS++
+
+    if (CHPOKS%bonusModificator == 0) {
+        document.getElementById("score").className = 'score';
+        setTimeout(() => { document.getElementById("score").className = 'score_pop';}, 500);
+    }
+
     document.getElementById("score").innerHTML = CHPOKS;
     SFXCHPOK.play();
 
