@@ -48,7 +48,7 @@
 
 .score_pop {
   color: brown;
-  animation: pop .5s forwards ease-in-out;
+  animation: pop .3s forwards ease-in-out;
 }
 
 

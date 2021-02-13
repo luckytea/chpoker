@@ -48,8 +48,8 @@ function changeState() {
     CHPOKS++
 
     if (CHPOKS%bonusModificator == 0) {
-        document.getElementById("score").className = 'score';
-        setTimeout(() => { document.getElementById("score").className = 'score_pop';}, 500);
+        document.getElementById("score").className = 'score_pop';
+        setTimeout(() => { document.getElementById("score").className = 'score';}, 300);
     }
 
     document.getElementById("score").innerHTML = CHPOKS;
