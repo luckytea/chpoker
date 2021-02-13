@@ -1,15 +1,22 @@
 const modeZen = 0;
 const modeIdle = 1;
 
-const dafaultSprite = "img/popcat-sprite.png";
+const spriteCatOpen = "cat_open";
+const spriteCatClose = "cat_close";
+
+const spriteDemonOpen = "demon_open";
+const spriteDemonClose = "demon_close";
+
+const SFXCHPOK = new Audio("sfx/pop.mp3");
 
 var CHPOKS = 0;
-var SFXCHPOK = new Audio("sfx/pop.mp3");
 var MODE = modeZen;
 
-var CURRENT_SPRITE = dafaultSprite;
+var styleClose = "";
+var styleOpen = "";
 
 function main(){
+    setSprite('popcat');
     window.setInterval(autoChpoker, 1000)
 }
 
@@ -24,7 +31,15 @@ function setMode(newMode) {
 }
 
 function setSprite(sprite) {
-    CURRENT_SPRITE = newSprite;
+    if (sprite == "popcat") {
+        styleOpen  = spriteCatOpen;
+        styleClose = spriteCatClose;
+    } else {
+        styleOpen  = spriteDemonOpen;
+        styleClose = spriteDemonClose;
+    }
+
+    document.getElementById("chpoker").className = styleOpen;
 }
 
 function changeState() {
@@ -32,6 +47,6 @@ function changeState() {
     document.getElementById("score").innerHTML = CHPOKS;
     SFXCHPOK.play();
 
-    document.getElementById("chpoker").className = "close";
-    setTimeout(() => { document.getElementById("chpoker").className = "open"; }, 125);
+    document.getElementById("chpoker").className = styleClose;
+    setTimeout(() => { document.getElementById("chpoker").className = styleOpen;}, 125);
 }
