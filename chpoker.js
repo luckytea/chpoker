@@ -1,6 +1,11 @@
 const modeZen = 0;
 const modeIdle = 1;
 
+const sfxPop  = "sfx/pop.mp3";
+const sfxWhat = "sfx/what.wav";
+const sfxNya  = "sfx/nya.mp3";
+var sfxCurrent = "";
+
 const bonusModificator = 10;
 
 const spriteCatOpen = "cat_open";
@@ -12,7 +17,6 @@ const spriteDemonClose = "demon_close";
 var CHPOKS = 0;
 var MODE = modeZen;
 
-
 const defaultChpokInterval = 1000;
 const minInchpokInterval = 100;
 const maxInchpokInterval = 3000;
@@ -23,6 +27,8 @@ var styleClose = spriteCatClose;
 
 function main(){
     setSprite('popcat');
+    setSFX(sfxPop);
+
     document.getElementById("metronome-bpm").innerHTML = chpokInterval;
 
     var autoChpoker = function() {
@@ -66,6 +72,10 @@ function setSprite(sprite) {
     document.getElementById("chpoker").className = styleOpen;
 }
 
+function setSFX(sfx) {
+    sfxCurrent = sfx;
+}
+
 function changeState() {
     CHPOKS++
 
@@ -76,7 +86,7 @@ function changeState() {
 
     document.getElementById("score").innerHTML = CHPOKS;
     
-    playSfx("sfx/pop.mp3");
+    playSfx(sfxCurrent);
 
     document.getElementById("chpoker").className = styleClose;
     setTimeout(() => { document.getElementById("chpoker").className = styleOpen;}, 125);
@@ -84,6 +94,8 @@ function changeState() {
 
 function playSfx(sfx) {
     var sfx = new Audio(sfx);
+
     sfx.play();
-    delete  sfx;
+
+    delete sfx;
 }

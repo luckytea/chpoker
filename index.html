@@ -23,6 +23,12 @@
             <button type="button" onclick="setSprite('demon')">demon</button>
         </div>
 
+        <div class="menu">
+            <button type="button" onclick="setSFX(sfxPop)">1</button>
+            <button type="button" onclick="setSFX(sfxWhat)">2</button>
+            <button type="button" onclick="setSFX(sfxNya)">3</button>
+        </div>
+
         <div>
             <input id="metronome" type="range" min="100" max="3000" step="100" value="1000" list="marks" oninput="setChpokInterval(metronome.value)">
             BPM: <span id="metronome-bpm">0</span>
@@ -36,6 +42,6 @@
             number of chpoks: <span id="score" class="score">0</span>
         </div>
 
-        <div class="version">chpoker v0.1.10</div>
+        <div class="version">chpoker v0.2.1</div>
     </div>
 </body>
