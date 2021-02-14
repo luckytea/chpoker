@@ -45,6 +45,10 @@
   margin-top: 20px;
 }
 
+.version {
+  padding-top: 15px;
+}
+
 .score {}
 
 .score_pop {
@@ -59,7 +63,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(35px);
+    transform: translateY(25px);
   }
 }
 

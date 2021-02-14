@@ -13,8 +13,6 @@
 
 <body onload="main()">
     <div class="flexbox-container-center">
-        <div class="version">chpoker v0.1.9</div>
-
         <div class="menu">
             <button type="button" onclick="setMode(modeZen)">Zen mode</button>
             <button type="button" onclick="setMode(modeIdle)">Idle mode</button>
@@ -26,11 +24,18 @@
         </div>
 
         <div>
+            <input id="metronome" type="range" min="100" max="3000" step="100" value="1000" list="marks" oninput="setChpokInterval(metronome.value)">
+            BPM: <span id="metronome-bpm">0</span>
+        </div>
+        
+        <div>
             <div id="chpoker" class="open" onclick="changeState()"></div>
         </div>
 
         <div class="score-table">
             number of chpoks: <span id="score" class="score">0</span>
         </div>
+
+        <div class="version">chpoker v0.1.10</div>
     </div>
 </body>

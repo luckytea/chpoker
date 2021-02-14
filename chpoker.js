@@ -12,22 +12,46 @@ const spriteDemonClose = "demon_close";
 var CHPOKS = 0;
 var MODE = modeZen;
 
+
+const defaultChpokInterval = 1000;
+const minInchpokInterval = 100;
+const maxInchpokInterval = 3000;
+var chpokInterval = defaultChpokInterval;
+
 var styleOpen  = spriteCatOpen;
 var styleClose = spriteCatClose;
 
 function main(){
     setSprite('popcat');
-    window.setInterval(autoChpoker, 1000)
-}
+    document.getElementById("metronome-bpm").innerHTML = chpokInterval;
 
-function autoChpoker() {
-    if (MODE == modeIdle) {
-        changeState();
+    var autoChpoker = function() {
+        if (MODE == modeIdle) {
+            changeState();
+        }
+
+        setTimeout(autoChpoker, chpokInterval);
     }
+
+    setTimeout(autoChpoker, chpokInterval);
 }
 
 function setMode(newMode) {
     MODE = newMode;
+}
+
+function setChpokInterval(interval) {
+    if (interval > maxInchpokInterval) {
+        interval = defaultChpokInterval;
+    }
+
+    if (interval < minInchpokInterval) {
+        interval = defaultChpokInterval;
+    }
+
+    chpokInterval = interval;
+
+    document.getElementById("metronome-bpm").innerHTML = chpokInterval;
 }
 
 function setSprite(sprite) {
