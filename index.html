@@ -30,10 +30,10 @@
         </div>
 
         <div>
-            <input id="metronome" type="range" min="100" max="3000" step="100" value="1000" list="marks" oninput="setChpokInterval(metronome.value)">
+            <input id="metronome" type="range" min="1" max="240" step="1" value="60" list="marks" oninput="setChpokInterval(metronome.value)">
             BPM: <span id="metronome-bpm">0</span>
         </div>
-        
+
         <div>
             <div id="chpoker" class="open" onclick="changeState()"></div>
         </div>

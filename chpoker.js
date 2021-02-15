@@ -17,10 +17,9 @@ const spriteDemonClose = "demon_close";
 var CHPOKS = 0;
 var MODE = modeZen;
 
-const defaultChpokInterval = 1000;
-const minInchpokInterval = 100;
-const maxInchpokInterval = 3000;
-var chpokInterval = defaultChpokInterval;
+const defaultBeatsPerMinute = 60;
+const defaultChpokIntervalMilseconds = 1000;
+var chpokInterval = (60/defaultBeatsPerMinute) * defaultChpokIntervalMilseconds;
 
 var styleOpen  = spriteCatOpen;
 var styleClose = spriteCatClose;
@@ -29,7 +28,7 @@ function main(){
     setSprite('popcat');
     setSFX(sfxPop);
 
-    document.getElementById("metronome-bpm").innerHTML = chpokInterval;
+    document.getElementById("metronome-bpm").innerHTML = defaultBeatsPerMinute;
 
     var autoChpoker = function() {
         if (MODE == modeIdle) {
@@ -47,17 +46,12 @@ function setMode(newMode) {
 }
 
 function setChpokInterval(interval) {
-    if (interval > maxInchpokInterval) {
-        interval = defaultChpokInterval;
-    }
 
-    if (interval < minInchpokInterval) {
-        interval = defaultChpokInterval;
-    }
+    _interval = (60/interval) * 1000
 
-    chpokInterval = interval;
+    chpokInterval = _interval;
 
-    document.getElementById("metronome-bpm").innerHTML = chpokInterval;
+    document.getElementById("metronome-bpm").innerHTML = interval;
 }
 
 function setSprite(sprite) {
@@ -85,7 +79,7 @@ function changeState() {
     }
 
     document.getElementById("score").innerHTML = CHPOKS;
-    
+
     playSfx(sfxCurrent);
 
     document.getElementById("chpoker").className = styleClose;
