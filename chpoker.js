@@ -17,9 +17,11 @@ const spriteDemonClose = "demon_close";
 var CHPOKS = 0;
 var MODE = modeZen;
 
+const MinuteInSeconds = 60;
 const defaultBeatsPerMinute = 60;
 const defaultChpokIntervalMilseconds = 1000;
-var chpokInterval = (60/defaultBeatsPerMinute) * defaultChpokIntervalMilseconds;
+const OneSecondIntervalInMilseconds = 1000;
+var chpokInterval = (MinuteInSeconds/defaultBeatsPerMinute) * OneSecondIntervalInMilseconds;
 
 var styleOpen  = spriteCatOpen;
 var styleClose = spriteCatClose;
@@ -47,7 +49,7 @@ function setMode(newMode) {
 
 function setChpokInterval(interval) {
 
-    _interval = (60/interval) * 1000
+    _interval = (MinuteInSeconds/interval) * OneSecondIntervalInMilseconds
 
     chpokInterval = _interval;
 
