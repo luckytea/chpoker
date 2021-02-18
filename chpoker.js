@@ -116,3 +116,7 @@ function playSfx(sfx) {
 
     delete sfx;
 }
+
+function catalog() {
+    alert("возьми да напиши")
+}

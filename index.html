@@ -26,13 +26,9 @@
             </div>
             
             <div id="app-bottom-bar">
-                <div class="container">
                     <input type="checkbox" name="toggle" id="toggle-button" class="toggle-button" onchange="toggleMode()">
-                </div>
-
-                <div class="container">
-                    <input type="checkbox" name="toggle" id="toggle-button-mute" class="toggle-button-sfx" onchange="toggleMute()">
-                </div>
+                    <input type="checkbox" name="toggle" id="toggle-button-mute" class="button-template img-mute" onchange="toggleMute()">
+                    <input type="checkbox" name="toggle" id="button-catalog" class="button-template img-catalog" onchange="catalog()">
 
                 <!-- <div class="menu">
                     <button type="button" onclick="setSprite('popcat')">popcat</button>
