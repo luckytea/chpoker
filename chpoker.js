@@ -5,6 +5,7 @@ const sfxPop  = "sfx/pop.mp3";
 const sfxWhat = "sfx/what.wav";
 const sfxNya  = "sfx/nya.mp3";
 var sfxCurrent = "";
+var sfxVolume = 1;
 
 const bonusModificator = 10;
 
@@ -57,8 +58,17 @@ function toggleMode() {
     }
 }
 
-function setChpokInterval(interval) {
+function toggleMute() {
+    var checked = document.getElementById("toggle-button-mute").checked;
 
+    if (!checked) {
+        sfxVolume = 1;
+    } else {
+        sfxVolume = 0;
+    }
+}
+
+function setChpokInterval(interval) {
     _interval = (MinuteInSeconds/interval) * OneSecondIntervalInMilseconds
 
     chpokInterval = _interval;
@@ -101,6 +111,7 @@ function changeState() {
 function playSfx(sfx) {
     var sfx = new Audio(sfx);
 
+    sfx.volume = sfxVolume;
     sfx.play();
 
     delete sfx;
