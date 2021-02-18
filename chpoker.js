@@ -31,6 +31,8 @@ function main(){
     setSprite('popcat');
     setSFX(sfxPop);
 
+    toggleMode();
+
     // document.getElementById("metronome-bpm").innerHTML = defaultBeatsPerMinute;
 
     var autoChpoker = function() {
