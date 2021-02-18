@@ -30,7 +30,7 @@ function main(){
     setSprite('popcat');
     setSFX(sfxPop);
 
-    document.getElementById("metronome-bpm").innerHTML = defaultBeatsPerMinute;
+    // document.getElementById("metronome-bpm").innerHTML = defaultBeatsPerMinute;
 
     var autoChpoker = function() {
         if (MODE == modeIdle) {
@@ -45,6 +45,16 @@ function main(){
 
 function setMode(newMode) {
     MODE = newMode;
+}
+
+function toggleMode() {
+    var checked = document.getElementById("toggle-button").checked;
+
+    if (!checked) {
+        MODE = modeIdle;
+    } else {
+        MODE = modeZen;
+    }
 }
 
 function setChpokInterval(interval) {

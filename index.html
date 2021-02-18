@@ -26,7 +26,10 @@
             </div>
             
             <div id="app-bottom-bar">
-                <div class="menu">
+                <div class="container">
+                    <input type="checkbox" name="toggle" id="toggle-button" class="toggle-button" onchange="toggleMode()">
+                </div>
+                <!-- <div class="menu">
                     <button type="button" onclick="setMode(modeZen)">Zen mode</button>
                     <button type="button" onclick="setMode(modeIdle)">Idle mode</button>
                 </div>
@@ -45,7 +48,7 @@
                 <div>
                     <input id="metronome" type="range" min="1" max="240" step="1" value="60" list="marks" oninput="setChpokInterval(metronome.value)">
                     Chpoks Per Minute: <span id="metronome-bpm">0</span>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
