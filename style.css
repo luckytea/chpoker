@@ -92,33 +92,36 @@ body {
   }
 }
 
-
-#app-root {
-}
+#app-root {}
 
 /* app-top-bar */
 #app-top-bar {
   width: 356px;
-  margin-top: -50px;
+  height: 100px;
 }
 
 .circle {
-  width: 125px;
-  height: 125px;
-  border-radius: 62.5px;
-  background: red;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background: rgb(229,0,0);
+  background: linear-gradient(180deg, rgba(229,0,0,1) 0%, rgba(165,0,0,1) 100%); 
+  position: absolute;
+  top: -50px;
+  z-index: -1;
 }
 
 .score-table {
   display: flex;
-  align-items:flex-end;
-  justify-content: space-around;
-
+  flex-flow: column nowrap;
+  align-items: center;
+  
   color: whitesmoke;
   font-size: 22pt;
 }
 
-.score {}
+.score {
+}
 /* app-game */
 #app-game {
   width: 356px;
