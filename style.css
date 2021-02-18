@@ -57,10 +57,7 @@ body {
   background: url(img/sprite-caco.png) 0 -356px;
 }
 
-.score_pop {
-  color: brown;
-  animation: pop .3s forwards ease-in-out;
-}
+
 
 @keyframes fade {
   0%,
@@ -121,6 +118,12 @@ body {
 }
 
 .score {
+  color: whitesmoke;
+}
+
+.score_pop {
+  color: brown;
+  animation: pop .3s forwards ease-in-out;
 }
 /* app-game */
 #app-game {
