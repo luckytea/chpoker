@@ -20,19 +20,19 @@
 }
 
 #chpoker.cat_open {
-  background: url(img/popcat-sprite.png) 0 0;
+  background: url(img/sprite-popcat.png) 0 0;
 }
 
 #chpoker.cat_close {
-  background: url(img/popcat-sprite.png) 0 -356px;
+  background: url(img/sprite-popcat.png) 0 -356px;
 }
 
 #chpoker.demon_open {
-  background: url(img/demon-sprite.png) 0 0;
+  background: url(img/sprite-caco.png) 0 0;
 }
 
 #chpoker.demon_close {
-  background: url(img/demon-sprite.png) 0 -356px;
+  background: url(img/sprite-caco.png) 0 -356px;
 }
 
 .score-table {
