@@ -122,7 +122,7 @@ body {
 }
 
 .score_pop {
-  color: brown;
+  color: #FFD700;
   animation: pop .3s forwards ease-in-out;
 }
 /* app-game */
