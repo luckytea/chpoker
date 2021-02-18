@@ -76,3 +76,12 @@
     transform: scale(2);
   }
 }
+
+#background-drop {
+  background: radial-gradient(119.39% 48.49% at 50% 43.53%, #FFDFB5 0%, rgba(255, 145, 0, 0) 100%), 
+              radial-gradient(167% 38.17% at 50% 115.79%, rgba(142, 142, 142, 0.35) 0%, rgba(255, 138, 0, 0) 100%), 
+              radial-gradient(100% 100% at 100% 0%, #FF4646 0%, #EEBE12 100%);
+  background-blend-mode: 
+              normal, multiply, normal;
+}
+
