@@ -33,8 +33,6 @@ function main(){
 
     toggleMode();
 
-    // document.getElementById("metronome-bpm").innerHTML = defaultBeatsPerMinute;
-
     var autoChpoker = function() {
         if (MODE == modeIdle) {
             changeState();

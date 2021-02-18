@@ -34,6 +34,13 @@ body {
   height: 356px;
 }
 
+.chpoker-shadow {
+  height: 74px;
+  width: 336px;
+  background: url(img/misc-person-shadow.png) 0 0;
+  animation: fade 2.5s infinite ease-in-out;
+}
+
 #chpoker.cat_open {
   background: url(img/sprite-popcat.png) 0 0;
 }
@@ -53,6 +60,16 @@ body {
 .score_pop {
   color: brown;
   animation: pop .3s forwards ease-in-out;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes idle {

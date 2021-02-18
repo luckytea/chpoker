@@ -23,28 +23,13 @@
 
             <div id="app-game">
                 <div id="chpoker" class="open" onclick="changeState()"></div>
+                <div name="chpoker-shadow" class="chpoker-shadow"></div>
             </div>
             
             <div id="app-bottom-bar">
-                    <input type="checkbox" name="toggle" id="toggle-button" class="toggle-button" onchange="toggleMode()">
-                    <input type="checkbox" name="toggle" id="toggle-button-mute" class="button-template img-mute" onchange="toggleMute()">
-                    <input type="checkbox" name="toggle" id="button-catalog" class="button-template img-catalog" onchange="catalog()">
-
-                <!-- <div class="menu">
-                    <button type="button" onclick="setSprite('popcat')">popcat</button>
-                    <button type="button" onclick="setSprite('demon')">demon</button>
-                </div>
-
-                <div class="menu">
-                    <button type="button" onclick="setSFX(sfxPop)">1</button>
-                    <button type="button" onclick="setSFX(sfxWhat)">2</button>
-                    <button type="button" onclick="setSFX(sfxNya)">3</button>
-                </div>
-
-                <div>
-                    <input id="metronome" type="range" min="1" max="240" step="1" value="60" list="marks" oninput="setChpokInterval(metronome.value)">
-                    Chpoks Per Minute: <span id="metronome-bpm">0</span>
-                </div> -->
+                <input type="checkbox" name="toggle" id="toggle-button" class="toggle-button" onchange="toggleMode()">
+                <input type="checkbox" name="toggle" id="toggle-button-mute" class="button-template img-mute" onchange="toggleMute()">
+                <input type="checkbox" name="toggle" id="button-catalog" class="button-template img-catalog" onchange="catalog()">
             </div>
         </div>
     </div>
