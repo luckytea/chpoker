@@ -125,6 +125,7 @@ body {
   color: #FFD700;
   animation: pop .3s forwards ease-in-out;
 }
+
 /* app-game */
 #app-game {
   width: 356px;

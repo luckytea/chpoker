@@ -68,6 +68,16 @@ function toggleMute() {
     }
 }
 
+function toggleChpocker() {
+    var checked = document.getElementById("button-catalog").checked;
+
+    if (!checked) {
+        setSprite("popcat");
+    } else {
+        setSprite("chpok-demon");
+    }
+}
+
 function setChpokInterval(interval) {
     _interval = (MinuteInSeconds/interval) * OneSecondIntervalInMilseconds
 
@@ -115,8 +125,4 @@ function playSfx(sfx) {
     sfx.play();
 
     delete sfx;
-}
-
-function catalog() {
-    alert("возьми да напиши")
 }
