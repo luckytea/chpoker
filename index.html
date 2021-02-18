@@ -12,36 +12,41 @@
 </head>
 
 <body onload="main()">
-    <div class="flexbox-container-center background-drop">
-        <div class="menu">
-            <button type="button" onclick="setMode(modeZen)">Zen mode</button>
-            <button type="button" onclick="setMode(modeIdle)">Idle mode</button>
-        </div>
+    <div id="window" class="flexbox-container-center background-drop">
+        <div id="app-root" class="flexbox-container-center background-drop">
+            <div id="app-top-bar" class="flexbox-container-center">
+                <div class="score-table circle">
+                    score:
+                    <span id="score" class="score">0</span>
+                </div>
+            </div>
 
-        <div class="menu">
-            <button type="button" onclick="setSprite('popcat')">popcat</button>
-            <button type="button" onclick="setSprite('demon')">demon</button>
-        </div>
+            <div id="app-game">
+                <div id="chpoker" class="open" onclick="changeState()"></div>
+            </div>
+            
+            <div id="app-bottom-bar">
+                <div class="menu">
+                    <button type="button" onclick="setMode(modeZen)">Zen mode</button>
+                    <button type="button" onclick="setMode(modeIdle)">Idle mode</button>
+                </div>
 
-        <div class="menu">
-            <button type="button" onclick="setSFX(sfxPop)">1</button>
-            <button type="button" onclick="setSFX(sfxWhat)">2</button>
-            <button type="button" onclick="setSFX(sfxNya)">3</button>
-        </div>
+                <div class="menu">
+                    <button type="button" onclick="setSprite('popcat')">popcat</button>
+                    <button type="button" onclick="setSprite('demon')">demon</button>
+                </div>
 
-        <div>
-            <input id="metronome" type="range" min="1" max="240" step="1" value="60" list="marks" oninput="setChpokInterval(metronome.value)">
-            Chpoks Per Minute: <span id="metronome-bpm">0</span>
-        </div>
+                <div class="menu">
+                    <button type="button" onclick="setSFX(sfxPop)">1</button>
+                    <button type="button" onclick="setSFX(sfxWhat)">2</button>
+                    <button type="button" onclick="setSFX(sfxNya)">3</button>
+                </div>
 
-        <div>
-            <div id="chpoker" class="open" onclick="changeState()"></div>
+                <div>
+                    <input id="metronome" type="range" min="1" max="240" step="1" value="60" list="marks" oninput="setChpokInterval(metronome.value)">
+                    Chpoks Per Minute: <span id="metronome-bpm">0</span>
+                </div>
+            </div>
         </div>
-
-        <div class="score-table">
-            number of chpoks: <span id="score" class="score">0</span>
-        </div>
-
-        <div class="version">chpoker v0.2.3</div>
     </div>
 </body>
